@@ -34,7 +34,7 @@ class ClassicChair implements Chair {
 
 class ClassicSofa implements Sofa {
     public void lieOn() {
-        System.out.println("Lying on a classic sofa.");
+        System.out.println("Lying on a classic sofa. »ли так.");
     }
 }
 

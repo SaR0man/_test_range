@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-// Прототип книги
+// РџСЂРѕС‚РѕС‚РёРї РєРЅРёРіРё
 class Book implements Cloneable {
     private String title;
     private String author;
@@ -46,7 +46,7 @@ class Book implements Cloneable {
     }
 }
 
-// Фабрика книг
+// Р¤Р°Р±СЂРёРєР° РєРЅРёРі
 class BookFactory {
     private Map<String, Book> prototypes = new HashMap<>();
 
@@ -65,20 +65,20 @@ class BookFactory {
 
 public class Main {
     public static void main(String[] args) {
-        // Создаем фабрику книг
+        // РЎРѕР·РґР°РµРј С„Р°Р±СЂРёРєСѓ РєРЅРёРі
         BookFactory bookFactory = new BookFactory();
 
-        // Создаем и добавляем прототипы книг в фабрику
+        // РЎРѕР·РґР°РµРј Рё РґРѕР±Р°РІР»СЏРµРј РїСЂРѕС‚РѕС‚РёРїС‹ РєРЅРёРі РІ С„Р°Р±СЂРёРєСѓ
         Book originalBook1 = new Book("Book 1", "Author 1", 100);
         Book originalBook2 = new Book("Book 2", "Author 2", 200);
         bookFactory.addPrototype("Book1", originalBook1);
         bookFactory.addPrototype("Book2", originalBook2);
 
-        // Создаем копии книг с помощью фабрики
+        // РЎРѕР·РґР°РµРј РєРѕРїРёРё РєРЅРёРі СЃ РїРѕРјРѕС‰СЊСЋ С„Р°Р±СЂРёРєРё
         Book clonedBook1 = bookFactory.createBook("Book1");
         Book clonedBook2 = bookFactory.createBook("Book2");
 
-        // Выводим информацию о копиях книг
+        // Р’С‹РІРѕРґРёРј РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РєРѕРїРёСЏС… РєРЅРёРі
         System.out.println("Cloned Book 1: " + clonedBook1.getTitle() + " by " + clonedBook1.getAuthor() + ", " + clonedBook1.getPages() + " pages");
         System.out.println("Cloned Book 2: " + clonedBook2.getTitle() + " by " + clonedBook2.getAuthor() + ", " + clonedBook2.getPages() + " pages");
     }

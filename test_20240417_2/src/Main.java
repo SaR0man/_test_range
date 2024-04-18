@@ -14,7 +14,6 @@ interface FurnitureFactory {
 }
 
 //// Создание конкретных продуктов.
-// Новая строка
 class ModernChair implements Chair {
     public void sitOn() {
         System.out.println("Sitting on a modern chair.");
@@ -35,7 +34,7 @@ class ClassicChair implements Chair {
 
 class ClassicSofa implements Sofa {
     public void lieOn() {
-        System.out.println("Lying on a classic sofa. И проба");
+        System.out.println("Lying on a classic sofa.");
     }
 }
 

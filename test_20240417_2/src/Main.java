@@ -1,5 +1,4 @@
-//// �������� ����������� ���������.
-//// Проба пробная
+//// Создание интерфейсов продуктов
 interface Chair {
     void sitOn();
 }
@@ -8,13 +7,13 @@ interface Sofa {
     void lieOn();
 }
 
-//// ����������� ���������� ����������� �������.
+//// Определение интерфейса абстрактной фабрики.
 interface FurnitureFactory {
     Chair createChair();
     Sofa createSofa();
 }
 
-//// �������� ���������� ���������.
+//// Создание конкретных продуктов.
 class ModernChair implements Chair {
     public void sitOn() {
         System.out.println("Sitting on a modern chair.");
@@ -39,7 +38,7 @@ class ClassicSofa implements Sofa {
     }
 }
 
-//// �������� ���������� ������.
+//// Создание конкретных фабрик.
 class ModernFurnitureFactory implements FurnitureFactory {
     public Chair createChair() {
         return new ModernChair();
@@ -60,7 +59,7 @@ class ClassicFurnitureFactory implements FurnitureFactory {
     }
 }
 
-//// ������� ��������� ������ ������ modern � classic, ��������� ������� ��� �������� ��������������� ������.
+//// Создаем семейства мебели стилей modern и classic, используя фабрики для создания соответствующей мебели.
 public class Main {
     public static void main(String[] args) {
         FurnitureFactory modernFactory = new ModernFurnitureFactory();

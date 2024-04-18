@@ -1,4 +1,5 @@
-//// Создание интерфейсов продуктов.
+//// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+//// РџСЂРѕР±Р° РїСЂРѕР±РЅР°СЏ
 interface Chair {
     void sitOn();
 }
@@ -7,13 +8,13 @@ interface Sofa {
     void lieOn();
 }
 
-//// Определение интерфейса абстрактной фабрики.
+//// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 interface FurnitureFactory {
     Chair createChair();
     Sofa createSofa();
 }
 
-//// Создание конкретных продуктов.
+//// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 class ModernChair implements Chair {
     public void sitOn() {
         System.out.println("Sitting on a modern chair.");
@@ -34,11 +35,11 @@ class ClassicChair implements Chair {
 
 class ClassicSofa implements Sofa {
     public void lieOn() {
-        System.out.println("Lying on a classic sofa. Или так.");
+        System.out.println("Lying on a classic sofa.");
     }
 }
 
-//// Создание конкретных фабрик.
+//// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
 class ModernFurnitureFactory implements FurnitureFactory {
     public Chair createChair() {
         return new ModernChair();
@@ -59,7 +60,7 @@ class ClassicFurnitureFactory implements FurnitureFactory {
     }
 }
 
-//// Создаем семейства мебели стилей modern и classic, используя фабрики для создания соответствующей мебели.
+//// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ modern пїЅ classic, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
 public class Main {
     public static void main(String[] args) {
         FurnitureFactory modernFactory = new ModernFurnitureFactory();
